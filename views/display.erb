@@ -1,8 +1,22 @@
 <html>
   <head></head>
   <body>
-
-     <p> Results Page </p>
-
+		 <table>
+				<! make header />
+				<% (size.to_i).times do |i| %>
+				<th>
+					<%= (size.to_i - i - 1) %>
+				</th>
+				<% end %>
+				<th>AND</th>
+				<th>OR</th>
+				<th>XOR</th>
+		    <tr>
+					<td></td>
+					<td></td>
+        </tr>
+		 </table>
+		<br>
+		<a href="/">Back to main page</a>
   </body>
 </html>
