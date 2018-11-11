@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head></head>
   <body>
@@ -11,12 +12,20 @@
 				<th>AND</th>
 				<th>OR</th>
 				<th>XOR</th>
+				<! loop through each expression />
+				<% table.each do |i| %>
 		    <tr>
-					<td></td>
-					<td></td>
+					<! fill each cell with value >
+					<% i.each do |j| %>
+						<% if j %>
+							<td><%= trueSym %></td>
+						<% else %>
+							<td><%= falseSym %></td>
+						<% end %>
+					<% end %>
         </tr>
-		 </table>
-		<br>
+				<% end %>
+		 </table><br>
 		<a href="/">Back to main page</a>
   </body>
 </html>

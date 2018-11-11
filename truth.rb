@@ -29,9 +29,6 @@ get '/display' do
 		return erb :invalid
 	end
 
-	#make array of true/false values
-	#loop 2^n times (for each boolean expression of props)
-	#loop n times (to determine and/or/xor)
 	table = Array.new
 	n = params[:size].to_i
 
@@ -58,7 +55,7 @@ get '/display' do
 		table << expression
 	end
 		
-	erb :display, :locals => { tru: params[:true], fls: params[:false], size: params[:size], table: table}
+	erb :display, :locals => { trueSym: params[:true], falseSym: params[:false], size: params[:size], table: table}
 end
 
 # If we have an error
