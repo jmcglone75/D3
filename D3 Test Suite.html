@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-	<title>D3 Test Suite_3</title>
+	<title>D3 Test Suite</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -32,6 +32,162 @@
 <tr><td>assertText</td><td>//tr[8]<datalist><option>//tr[8]</option></datalist></td><td>T T F F T F</td>
 </tr>
 <tr><td>assertText</td><td>//tr[9]<datalist><option>//tr[9]</option></datalist></td><td>T T T T T T</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test_invalid_page</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567<datalist><option>http://localhost:4567</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>//html/body/form/dl/dt[3]/input<datalist><option>//html/body/form/dl/dt[3]/input</option></datalist></td><td>1</td>
+</tr>
+<tr><td>click</td><td>//html/body/form/dl/dt[4]/input<datalist><option>//html/body/form/dl/dt[4]/input</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//html/body/h1<datalist><option>//html/body/h1</option></datalist></td><td>ERROR</td>
+</tr>
+<tr><td>assertText</td><td>//html/body/h2<datalist><option>//html/body/h2</option></datalist></td><td>Invalid parameters.</td>
+</tr>
+<tr><td>assertText</td><td>//html/body/p<datalist><option>//html/body/p</option></datalist></td><td>Please enter:</td>
+</tr>
+<tr><td>assertText</td><td>//html/body/ol/li[1]<datalist><option>//html/body/ol/li[1]</option></datalist></td><td>A single-character true symbol</td>
+</tr>
+<tr><td>assertText</td><td>//html/body/ol/li[2]<datalist><option>//html/body/ol/li[1]</option><option>//html/body/ol/li[2]</option></datalist></td><td>A single-character false symbol</td>
+</tr>
+<tr><td>assertText</td><td>//html/body/ol/li[3]<datalist><option>//html/body/ol/li[1]</option><option>//html/body/ol/li[3]</option></datalist></td><td>A size greater than or equal to 2</td>
+</tr>
+<tr><td>assertText</td><td>//html/body/ol/li[4]<datalist><option>//html/body/ol/li[1]</option><option>//html/body/ol/li[4]</option></datalist></td><td>Different characters for the true and false symbols</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test_logical_ops_smallest</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567<datalist><option>http://localhost:4567</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>//html/body/form/dl/dt[3]/input<datalist><option>//html/body/form/dl/dt[3]/input</option></datalist></td><td>2</td>
+</tr>
+<tr><td>click</td><td>//html/body/form/dl/dt[4]/input<datalist><option>//html/body/form/dl/dt[4]/input</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//tr[2]/td[3]<datalist><option>//tr[2]/td[4]</option><option>//tr[2]/td[3]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[3]/td[3]<datalist><option>//tr[3]/td[4]</option><option>//tr[3]/td[3]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[4]/td[3]<datalist><option>//tr[4]/td[4]</option><option>//tr[4]/td[3]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[5]/td[3]<datalist><option>//tr[5]/td[4]</option><option>//tr[5]/td[3]</option></datalist></td><td>T</td>
+</tr>
+<tr><td>assertText</td><td>//tr[2]/td[4]<datalist><option>//tr[2]/td[5]</option><option>//tr[2]/td[4]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[3]/td[4]<datalist><option>//tr[3]/td[5]</option><option>//tr[3]/td[4]</option></datalist></td><td>T</td>
+</tr>
+<tr><td>assertText</td><td>//tr[4]/td[4]<datalist><option>//tr[4]/td[5]</option><option>//tr[4]/td[4]</option></datalist></td><td>T</td>
+</tr>
+<tr><td>assertText</td><td>//tr[5]/td[4]<datalist><option>//tr[5]/td[5]</option><option>//tr[5]/td[4]</option></datalist></td><td>T</td>
+</tr>
+<tr><td>assertText</td><td>//tr[2]/td[5]<datalist><option>//tr[2]/td[6]</option><option>//tr[2]/td[5]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[3]/td[5]<datalist><option>//tr[3]/td[6]</option><option>//tr[3]/td[5]</option></datalist></td><td>T</td>
+</tr>
+<tr><td>assertText</td><td>//tr[4]/td[5]<datalist><option>//tr[4]/td[6]</option><option>//tr[4]/td[5]</option></datalist></td><td>T</td>
+</tr>
+<tr><td>assertText</td><td>//tr[5]/td[5]<datalist><option>//tr[5]/td[6]</option><option>//tr[5]/td[5]</option></datalist></td><td>F</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test_logical_xor_default</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567<datalist><option>http://localhost:4567</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//html/body/form/dl/dt[4]/input<datalist><option>//html/body/form/dl/dt[4]/input</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//tr[2]/td[6]<datalist><option>//html/body/table/tr[2]/td[6]</option><option>//html/body/table/tr[1]/td[6]</option><option>//html/body/table/tr/td[6]</option><option>//html/body/tr[2]/td[6]</option><option>//html/tr[2]/td[6]</option><option>//tr[2]/td[6]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[3]/td[6]<datalist><option>//tr[3]/td[6]</option></datalist></td><td>T</td>
+</tr>
+<tr><td>assertText</td><td>//tr[4]/td[6]<datalist><option>//tr[4]/td[6]</option></datalist></td><td>T</td>
+</tr>
+<tr><td>assertText</td><td>//tr[5]/td[6]<datalist><option>//tr[5]/td[6]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[6]/td[6]<datalist><option>//tr[6]/td[6]</option></datalist></td><td>T</td>
+</tr>
+<tr><td>assertText</td><td>//tr[7]/td[6]<datalist><option>//tr[7]/td[6]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[8]/td[6]<datalist><option>//tr[8]/td[6]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[9]/td[6]<datalist><option>//tr[9]/td[6]</option></datalist></td><td>T</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test_logical_or_default</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567<datalist><option>http://localhost:4567</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//html/body/form/dl/dt[4]/input<datalist><option>//html/body/form/dl/dt[4]/input</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//tr[2]/td[5]<datalist><option>//tr[2]/td[6]</option><option>//html/body/table/tr[2]/td[6]</option><option>//html/body/table/tr[1]/td[6]</option><option>//html/body/table/tr/td[6]</option><option>//html/body/tr[2]/td[6]</option><option>//html/tr[2]/td[6]</option><option>//tr[2]/td[5]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[3]/td[5]<datalist><option>//tr[3]/td[6]</option><option>//tr[3]/td[5]</option></datalist></td><td>T</td>
+</tr>
+<tr><td>assertText</td><td>//tr[4]/td[5]<datalist><option>//tr[4]/td[6]</option><option>//tr[4]/td[5]</option></datalist></td><td>T</td>
+</tr>
+<tr><td>assertText</td><td>//tr[5]/td[5]<datalist><option>//tr[5]/td[6]</option><option>//tr[5]/td[5]</option></datalist></td><td>T</td>
+</tr>
+<tr><td>assertText</td><td>//tr[6]/td[5]<datalist><option>//tr[6]/td[6]</option><option>//tr[6]/td[5]</option></datalist></td><td>T</td>
+</tr>
+<tr><td>assertText</td><td>//tr[7]/td[5]<datalist><option>//tr[7]/td[6]</option><option>//tr[7]/td[5]</option></datalist></td><td>T</td>
+</tr>
+<tr><td>assertText</td><td>//tr[8]/td[5]<datalist><option>//tr[8]/td[6]</option><option>//tr[8]/td[5]</option></datalist></td><td>T</td>
+</tr>
+<tr><td>assertText</td><td>//tr[9]/td[5]<datalist><option>//tr[9]/td[6]</option><option>//tr[9]/td[5]</option></datalist></td><td>T</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test_logical_and_default</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567<datalist><option>http://localhost:4567</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//html/body/form/dl/dt[4]/input<datalist><option>//html/body/form/dl/dt[4]/input</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//tr[2]/td[4]<datalist><option>//tr[2]/td[5]</option><option>//tr[2]/td[6]</option><option>//html/body/table/tr[2]/td[6]</option><option>//html/body/table/tr[1]/td[6]</option><option>//html/body/table/tr/td[6]</option><option>//html/body/tr[2]/td[6]</option><option>//html/tr[2]/td[6]</option><option>//tr[2]/td[4]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[3]/td[4]<datalist><option>//tr[3]/td[5]</option><option>//tr[3]/td[6]</option><option>//tr[3]/td[4]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[4]/td[4]<datalist><option>//tr[4]/td[5]</option><option>//tr[4]/td[6]</option><option>//tr[4]/td[4]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[5]/td[4]<datalist><option>//tr[5]/td[5]</option><option>//tr[5]/td[6]</option><option>//tr[5]/td[4]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[6]/td[4]<datalist><option>//tr[6]/td[5]</option><option>//tr[6]/td[6]</option><option>//tr[6]/td[4]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[7]/td[4]<datalist><option>//tr[7]/td[5]</option><option>//tr[7]/td[6]</option><option>//tr[7]/td[4]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[8]/td[4]<datalist><option>//tr[8]/td[5]</option><option>//tr[8]/td[6]</option><option>//tr[8]/td[4]</option></datalist></td><td>F</td>
+</tr>
+<tr><td>assertText</td><td>//tr[9]/td[4]<datalist><option>//tr[9]/td[5]</option><option>//tr[9]/td[6]</option><option>//tr[9]/td[4]</option></datalist></td><td>T</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test_large_truth_table_header</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567<datalist><option>http://localhost:4567</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//html/body/form/dl/dt[3]/input<datalist><option>//html/body/form/dl/dt[3]/input</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>//html/body/form/dl/dt[3]/input<datalist><option>//html/body/form/dl/dt[3]/input</option></datalist></td><td>10</td>
+</tr>
+<tr><td>click</td><td>//html/body/form/dl/dt[4]/input<datalist><option>//html/body/form/dl/dt[4]/input</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//tr[1]<datalist><option>//tr[1]</option></datalist></td><td>9 8 7 6 5 4 3 2 1 0 AND OR XOR</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -123,11 +279,19 @@
 </tr>
 <tr><td>assertText</td><td>//html/body/form/dl/dt[1]/label<datalist><option>//html/body/form/dl/dt[1]/label</option></datalist></td><td>True symbol:</td>
 </tr>
+<tr><td>assertAttribute</td><td>//html/body/form/dl/dt[1]/input@type<datalist><option>//html/body/form/dl/dt[1]/input</option><option>//html/body/form/dl/dt[1]/input@type</option></datalist></td><td>text</td>
+</tr>
 <tr><td>assertText</td><td>//html/body/form/dl/dt[2]/label<datalist><option>//html/body/form/dl/dt[2]/label</option></datalist></td><td>False symbol:</td>
+</tr>
+<tr><td>assertAttribute</td><td>//html/body/form/dl/dt[2]/input@type<datalist><option>//html/body/form/dl/dt[2]/input@type</option></datalist></td><td>text</td>
 </tr>
 <tr><td>assertText</td><td>//html/body/form/dl/dt[3]/label<datalist><option>//html/</option><option>//html/body/form/dl/dt[3]/label</option></datalist></td><td>Size (2^x):</td>
 </tr>
+<tr><td>assertAttribute</td><td>//html/body/form/dl/dt[3]/input@type<datalist><option>//html/body/form/dl/dt[3]/input@type</option></datalist></td><td>text</td>
+</tr>
 <tr><td>assertValue</td><td>//html/body/form/dl/dt[4]/input<datalist><option>//html/body/form/dl/dt[4]/input</option></datalist></td><td>Show truth table</td>
+</tr>
+<tr><td>assertAttribute</td><td>//html/body/form/dl/dt[4]/input@type<datalist><option>//html/body/form/dl/dt[4]/input@type</option></datalist></td><td>submit</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">

@@ -3,15 +3,17 @@
   <head></head>
   <body>
 		 <table>
-				<! make header />
-				<% (size.to_i).times do |i| %>
-				<th>
-					<%= (size.to_i - i - 1) %>
-				</th>
-				<% end %>
-				<th>AND</th>
-				<th>OR</th>
-				<th>XOR</th>
+				<tr>
+					<! make header />
+					<% (size.to_i).times do |i| %>
+					<th>
+						<%= (size.to_i - i - 1) %>
+					</th>
+					<% end %>
+					<th>AND</th>
+					<th>OR</th>
+					<th>XOR</th>
+				</tr>
 				<! loop through each expression />
 				<% table.each do |i| %>
 		    <tr>
